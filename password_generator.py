@@ -21,7 +21,7 @@ def generate(lenght):
     password = ''
     for i in range(int(lenght)):
         new = random.randint(0,int(lenght))
-        password += all_list[new]
+        password += all_list[new%len(all_list)]
     return password
 
 while True:
@@ -31,4 +31,3 @@ while True:
         break
     else:
         continue
-
